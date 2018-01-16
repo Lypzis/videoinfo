@@ -1,0 +1,32 @@
+<head>
+    <title>VideoInfo</title>
+</head>
+<body>
+    <h1><u>Video Info</u></h1>
+
+    <form>
+        <div>
+            <label>Select a video: </label>
+            <input type="file" accept="video/*"/>
+        </div>
+        <div>
+            <button type="submit">Get Info</button>
+        </div>
+    </form>
+
+    <script>
+        //just vanilla javascript :D
+
+        const electron = require('electron');
+        const { ipcRenderer } = electron; //used to communicate with the backend(electronApp) side
+
+        document.querySelector('form').addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const file = document.querySelector('input').files[0];
+
+            
+        });
+    </script>
+
+</body>
