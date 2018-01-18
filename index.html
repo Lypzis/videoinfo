@@ -1,5 +1,6 @@
 <head>
     <title>VideoInfo</title>
+    <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
     <h1><u>Video Info</u></h1>
@@ -23,9 +24,11 @@
         document.querySelector('form').addEventListener('submit', (event) => {
             event.preventDefault();
 
-            const file = document.querySelector('input').files[0];
+            //set object path with information inputed
+            const { path } = document.querySelector('input').files[0];
 
-            
+            //send the object(information) to electron
+            ipcRenderer.send('videoSubmitted', path);
         });
     </script>
 
