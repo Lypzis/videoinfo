@@ -4,6 +4,11 @@ h1 {
     padding: 10px;
 }
 
+h2 {
+    text-align: center;
+    color: green;
+}
+
 form {
     text-align: center;
 }
